@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Logged in successfully</h2>
+    <p>Welcome, <span th:text="${username}">User</span>!</p>
+    <ul>
+        <li th:each="authority : ${authorities}" th:text="${authority}"></li>
+    </ul>
+    <form method="POST" th:action="@{/logout}">
+        <button type="submit" name="submit" value="value" class="link-button">Logout</button>
+    </form>
+</body>
+</html>
